@@ -1,0 +1,23 @@
+<div class="loginView">
+  <h1>Connexion</h1>
+  <p>Portail web M2-GI, université de Lorraine.<br>Veuillez vous connecter pour pouvoir poursuivre votre navigation sur ce site et avoir accès au contenu.</p>
+
+  <mat-card class="loginCard">
+    <div id="hr1"></div>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <mat-form-field>
+        <input matInput placeholder="Adresse mail" name="email" formControlName="email">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Mot de passe" name="password" formControlName="password" type="password">
+      </mat-form-field>
+      <button mat-raised-button type="submit" [disabled]="loginForm.invalid">
+        Se connecter
+        <mat-icon class="send-icon" aria-hidden="false">send</mat-icon>
+      </button>
+    </form>
+
+    <hr/>
+    <p>Attention : Ne communiquez jamais vos identifiants à un tiers.</p>
+  </mat-card>
+</div>

@@ -1,0 +1,62 @@
+.loginView {
+  position: relative;
+  top: 60px;
+  width: 400px;
+  height: 600mpx;
+  margin: auto;
+  text-align: center;
+}
+
+h1 {
+  color: #222222;
+}
+
+p {
+  color: #888888;
+  font-size: 0.8em;
+  padding-bottom: 18px;
+}
+
+.loginCard {
+  padding: 0px;
+}
+
+.loginCard p {
+  padding-left: 10px;
+  text-align: left;
+  font-size: 0.7em;
+}
+
+form {
+  margin-top: 25px;
+  margin-bottom: 30px;
+}
+
+mat-form-field {
+  padding: 0px;
+  width: 350px;
+}
+
+#hr1 {
+  width: 100%;
+  height: 5px;
+  background-color: #136dd3;
+  border-radius: 2px 2px 0px 0px;
+}
+
+hr { display: block; height: 1px;
+  border: 0; border-top: 1px solid #ccc;
+  margin: 1em 0; padding: 0; }
+
+button {
+  margin-top: 10px;
+  width: 350px;
+  color: white;
+  background-color: #1565c0;
+}
+
+.send-icon {
+  top: 2px;
+  position: relative;
+  font-size: 1.2em;
+}
