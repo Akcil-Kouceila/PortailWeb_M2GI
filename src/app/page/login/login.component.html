@@ -1,7 +1,7 @@
 <div class="loginView">
   <h1>Connexion</h1>
   <p>Portail web M2-GI, université de Lorraine.<br>Veuillez vous connecter pour pouvoir poursuivre votre navigation sur ce site et avoir accès au contenu.</p>
-
+  <span>{{msgError}}</span>
   <mat-card class="loginCard">
     <div id="hr1"></div>
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">

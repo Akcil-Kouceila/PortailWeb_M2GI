@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: 'AIzaSyAcGux4UlJMmr4RFENUyy4v2g329q8IXp8',
+    authDomain: 'portailweb-m2-gi.firebaseapp.com',
+    databaseURL: 'https://portailweb-m2-gi.firebaseio.com',
+    projectId: 'portailweb-m2-gi',
+    storageBucket: 'portailweb-m2-gi.appspot.com',
+    messagingSenderId: '155110968718',
+    appId: '1:155110968718:web:3ff5f036db74d6ce08e8df'
+  }
 };
 
 /*
