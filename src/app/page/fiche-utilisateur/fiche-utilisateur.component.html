@@ -1,1 +1,35 @@
-<p>fiche-utilisateur works!</p>
+<section>
+  <mat-card>
+    <div id="hr1"></div>
+    <div class = "head-card">
+      <img mat-card-mat-image [src] = 'user.img' />
+      <div class = "content">
+        <h3>
+          <span>{{user.prenom}} {{user.nom}}</span>
+        </h3>
+        <span class = "role">
+          {{user.role}}
+        </span>
+      </div>
+    </div>
+    <hr/>
+    <div class = "body">
+      <div class = "info">
+        <mat-icon>email</mat-icon>
+        <a
+          class = "email"
+          href = "mailto : {{user.prenom}} {{user.nom}}&lt;{{user.email}}&gt;"
+          title = "Envoyer un mail à {{user.prenom}} {{user.nom}}">
+          {{user.email}}
+        </a>
+      </div>
+      <div class = "info">
+        <mat-icon>phone</mat-icon>
+        <span
+          class = "tel">
+          {{user.tel}}
+      </span>
+      </div>
+    </div>
+  </mat-card>
+</section>

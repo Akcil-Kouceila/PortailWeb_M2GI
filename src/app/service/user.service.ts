@@ -16,8 +16,6 @@ export class UserService {
     return of(USERS);
   }
 
-  public getUsers() { console.log(USERS); }
-
   public getAllUsers(): Observable<User[]> {
     return this.afs.collection<User>('users').valueChanges();
   }

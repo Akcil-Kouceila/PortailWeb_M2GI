@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../../user.model';
 import { UserService } from 'src/app/service/user.service';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-utilisateurs',
@@ -14,9 +15,6 @@ export class UtilisateursComponent implements OnInit {
   constructor(private us: UserService) { }
 
   ngOnInit() {
-    this.getUsers();
-  }
-
-  public getUsers() {
+    this.us.getUsersMock().subscribe(users => this.users   = users);
   }
 }

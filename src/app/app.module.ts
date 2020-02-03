@@ -8,7 +8,6 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MaterialModule } from './material/material.module' ;
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { AngularFireModule } from '@angular/fire';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // Components
@@ -26,6 +25,8 @@ import { AuthService } from './service/auth.service';
 
 // Firebase
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireModule } from '@angular/fire';
 
 
 @NgModule({
@@ -49,7 +50,8 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
     MatFormFieldModule,
 
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    AngularFirestoreModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
