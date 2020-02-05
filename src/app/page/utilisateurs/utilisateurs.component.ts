@@ -15,6 +15,6 @@ export class UtilisateursComponent implements OnInit {
   constructor(private us: UserService) { }
 
   ngOnInit() {
-    this.us.getUsersMock().subscribe(users => this.users   = users);
+    this.us.getUsersMock().subscribe(data => this.users = data);
   }
 }

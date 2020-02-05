@@ -16,8 +16,6 @@ img {
   height: 100px;
   margin: 15px;
   border-radius: 500px;
-  border: 3px solid white;
-  box-shadow: 0px 2px 5px -1px black;
 }
 
 .content {
@@ -26,14 +24,14 @@ img {
 }
 
 h3 {
-  top: 8px;
-  font-size: 1.3em;
+  font-weight: lighter;
+  font-size: 1.4em;
   position: relative;
 }
 
 .role {
   font-size: 1.1em;
-  top: -15px;
+  top: -25px;
   color: #1565c0;
   position: relative;
 }
@@ -49,7 +47,6 @@ h3 {
 }
 
 .email, .tel {
-  top: -3px;
   left: 5px;
   color: #888888;
   position: relative;

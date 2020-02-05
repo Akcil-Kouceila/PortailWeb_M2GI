@@ -9,6 +9,7 @@
       <a [routerLink]="['/dashboard']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" mat-list-item href="#">Dashboard</a>
       <a [routerLink]="['/trombinoscope']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" mat-list-item href="#">Trombinoscope</a>
     </mat-nav-list>
+    <span class = "noms">K. OUALI & D. MAJKOWSKI <span>M2 GI - 2019/2020</span> </span>
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar>
@@ -21,6 +22,10 @@
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
       <span>Portail Web</span>
+      <div class="btn">
+        <a [routerLink]="['/']">Git</a>
+        <a [routerLink]="['/']">Dec</a>
+      </div>
     </mat-toolbar>
     <router-outlet></router-outlet>
   </mat-sidenav-content>
