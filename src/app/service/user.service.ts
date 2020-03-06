@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { User } from '../user.model';
+import { User } from '../models/user.model';
 import { Observable, of } from 'rxjs';
 
 import { USERS } from '../../assets/users.mock';
@@ -17,7 +17,7 @@ export class UserService {
   }
 
   public getAllUsers(): Observable<User[]> {
-    this.afs.collection<User>('users').valueChanges().subscribe((user) => {console.log(user);});
+    this.afs.collection<User>('users').valueChanges().subscribe((user) => { console.log(user); });
     return this.afs.collection<User>('users').valueChanges();
   }
  }

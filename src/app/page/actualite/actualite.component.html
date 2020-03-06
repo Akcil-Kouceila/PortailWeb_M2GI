@@ -1,0 +1,19 @@
+<section>
+  <mat-card>
+    <div id="hr1"></div>
+    <div class="actualite">
+      <div class = "head-card">
+        <img class="image" [src] = 'actu.image' />
+      </div>
+      <div class = "middle">
+        <h3> {{actu.titre}} </h3>
+        <mat-icon aria-hidden="false" aria-label="Example home icon">edit</mat-icon>
+      </div>
+      <div class = "body">
+        <div class = "texte">
+          {{actu.texte}}
+        </div>
+      </div>
+    </div>
+  </mat-card>
+</section>

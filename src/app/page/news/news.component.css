@@ -1,0 +1,16 @@
+.mainView {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+h2 {
+  top: 15px;
+  margin: 10px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.actualites {
+  display: flex;
+  flex-wrap: wrap;
+}

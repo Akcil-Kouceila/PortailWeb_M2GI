@@ -1,0 +1,9 @@
+<div class="mainView">
+  <h2>A la Une</h2>
+  <app-une [une] = 'news[0]'></app-une>
+  <h2>Actualités</h2>
+  <div class="actualites">
+    <app-actualite *ngFor = 'let actu of news | slice:1; let i = index' [actu] = 'actu'>
+    </app-actualite>
+  </div>
+</div>

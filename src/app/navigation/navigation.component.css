@@ -17,7 +17,10 @@
 }
 
 mat-toolbar {
+  display: flex;
+  flex-direction: row;
   background-color: #1565c0;
+  width: 100%;
 }
 
 span {
@@ -29,6 +32,8 @@ a {
 }
 
 a.active {
+  left: 10px;
+  position: relative;
   transition-duration: 0.5s;
   background-color: #F5F5F5;
 }
@@ -54,9 +59,20 @@ mat-sidenav {
 }
 
 .btn {
+  float: right;
+  width: 100%;
   text-align: right;
   position: relative;
-  float: right;
-  width: 100px;
-  background-color: orange;
+  padding-right: 30px;
+}
+
+.btn-link {
+  margin: 10px;
+}
+
+.icon {
+  top: 5px;
+  width: 35px;
+  height: 35px;
+  position: relative;
 }

@@ -25,8 +25,11 @@ import { AuthService } from './service/auth.service';
 
 // Firebase
 import { AngularFireAuthModule } from '@angular/fire/auth';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFirestoreModule, AngularFirestore } from '@angular/fire/firestore';
 import { AngularFireModule } from '@angular/fire';
+import { ActualiteComponent } from './page/actualite/actualite.component';
+import { NewsComponent } from './page/news/news.component';
+import { UneComponent } from './page/une/une.component';
 
 
 @NgModule({
@@ -39,6 +42,9 @@ import { AngularFireModule } from '@angular/fire';
     DashboardComponent,
     UtilisateursComponent,
     FicheUtilisateurComponent,
+    ActualiteComponent,
+    NewsComponent,
+    UneComponent,
   ],
   imports: [
     BrowserModule,

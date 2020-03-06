@@ -1,5 +1,5 @@
 .mainView {
   display: flex;
-  flex-wrap: wrap;
   padding: 10px;
+  flex-wrap: wrap;
 }
