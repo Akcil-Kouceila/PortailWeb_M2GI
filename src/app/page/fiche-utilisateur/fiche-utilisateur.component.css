@@ -1,6 +1,6 @@
 mat-card {
-  width: 450px;
-  height: 230px;
+  width: 400px;
+  height: 195px;
   margin: 8px;
   display: flex;
   padding: 0px;
@@ -12,8 +12,8 @@ mat-card {
 }
 
 img {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   margin: 15px;
   border-radius: 500px;
 }
@@ -25,12 +25,16 @@ img {
 
 h3 {
   font-weight: lighter;
-  font-size: 1.4em;
+  font-size: 1.2em;
   position: relative;
 }
 
+.body {
+  font-size: 0.9em;
+}
+
 .role {
-  font-size: 1.1em;
+  font-size: 1em;
   top: -25px;
   color: #1565c0;
   position: relative;
@@ -41,13 +45,21 @@ h3 {
 }
 
 .info mat-icon {
-  top: 5px;
-  color: #333;
+  color: white;
   position: relative;
 }
 
+.edit {
+  z-index: 2;
+  margin: 5px;
+  right: 0px;
+  position: absolute;
+  background: #136dd3;
+}
+
 .email, .tel {
-  left: 5px;
+  top: -8px;
+  left: 8px;
   color: #888888;
   position: relative;
   text-decoration: none;

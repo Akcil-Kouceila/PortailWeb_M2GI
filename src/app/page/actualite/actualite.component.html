@@ -6,8 +6,10 @@
         <img class="image" [src] = 'actu.image' />
       </div>
       <div class = "middle">
-        <h3> {{actu.titre}} </h3>
-        <mat-icon aria-hidden="false" aria-label="Example home icon">edit</mat-icon>
+        <h3> {{actu.titre}} <span>{{actu.date}}</span></h3>
+        <button class='edit' mat-mini-fab>
+          <mat-icon>edit</mat-icon>
+        </button>
       </div>
       <div class = "body">
         <div class = "texte">

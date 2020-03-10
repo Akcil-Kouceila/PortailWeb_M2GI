@@ -17,7 +17,11 @@ export class UserService {
   }
 
   public getAllUsers(): Observable<User[]> {
-    this.afs.collection<User>('users').valueChanges().subscribe((user) => { console.log(user); });
-    return this.afs.collection<User>('users').valueChanges();
+    return this.afs.collection<User>('users').valueChanges({idField: 'id'});
   }
- }
+
+  public addUser(user): Observable<User> {
+    this.afs.collection<User>('news').add(user);
+    return null;
+  }
+}

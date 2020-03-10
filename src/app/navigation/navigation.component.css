@@ -32,8 +32,6 @@ a {
 }
 
 a.active {
-  left: 10px;
-  position: relative;
   transition-duration: 0.5s;
   background-color: #F5F5F5;
 }
@@ -72,7 +70,7 @@ mat-sidenav {
 
 .icon {
   top: 5px;
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
   position: relative;
 }

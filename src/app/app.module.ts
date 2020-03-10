@@ -9,6 +9,7 @@ import { MaterialModule } from './material/material.module' ;
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule } from '@angular/material/dialog';
 
 // Components
 import { AppComponent } from './app.component';
@@ -19,6 +20,11 @@ import { TrombinoscopeComponent } from './page/trombinoscope/trombinoscope.compo
 import { UtilisateursComponent } from './page/utilisateurs/utilisateurs.component';
 import { FicheUtilisateurComponent } from './page/fiche-utilisateur/fiche-utilisateur.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { ActualiteComponent } from './page/actualite/actualite.component';
+import { NewsComponent } from './page/news/news.component';
+import { UneComponent } from './page/une/une.component';
+import { AddDialogComponent } from './page/add-dialog/add-dialog.component';
+import { FormNewsComponent } from './page/form-news/form-news.component';
 
 // Services
 import { AuthService } from './service/auth.service';
@@ -27,9 +33,6 @@ import { AuthService } from './service/auth.service';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule, AngularFirestore } from '@angular/fire/firestore';
 import { AngularFireModule } from '@angular/fire';
-import { ActualiteComponent } from './page/actualite/actualite.component';
-import { NewsComponent } from './page/news/news.component';
-import { UneComponent } from './page/une/une.component';
 
 
 @NgModule({
@@ -45,6 +48,8 @@ import { UneComponent } from './page/une/une.component';
     ActualiteComponent,
     NewsComponent,
     UneComponent,
+    AddDialogComponent,
+    FormNewsComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,11 +59,13 @@ import { UneComponent } from './page/une/une.component';
     LayoutModule,
     ReactiveFormsModule,
     MatFormFieldModule,
+    MatDialogModule,
 
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFirestoreModule
   ],
+  entryComponents: [AddDialogComponent],
   providers: [AuthService],
   bootstrap: [AppComponent]
 })

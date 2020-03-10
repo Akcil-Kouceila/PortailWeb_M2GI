@@ -17,7 +17,11 @@ export class NewsService {
   }
 
   public getAllNews(): Observable<Actualite[]> {
-    this.afs.collection<Actualite>('news').valueChanges().subscribe((actu) => { console.log(actu); });
-    return this.afs.collection<Actualite>('news').valueChanges();
+    return this.afs.collection<Actualite>('news').valueChanges({idField: 'id'});
+  }
+
+  public addNews(actu): Observable<Actualite> {
+    this.afs.collection<Actualite>('news').add(actu);
+    return null;
   }
 }

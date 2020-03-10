@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Actualite } from '../../models/actualite.model';
 import { NewsService } from 'src/app/service/news.service';
-import { AngularFirestore } from '@angular/fire/firestore';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { AddDialogComponent } from '../add-dialog/add-dialog.component';
 
 @Component({
   selector: 'app-news',
@@ -9,14 +10,42 @@ import { AngularFirestore } from '@angular/fire/firestore';
   styleUrls: ['./news.component.css']
 })
 export class NewsComponent implements OnInit {
+  private addDialog: MatDialogRef<AddDialogComponent>;
+  dialogStatus = 'inactive';
 
   public news: Actualite[];
 
-  constructor(private as: NewsService) { }
+  constructor(private as: NewsService,  public dialog: MatDialog) {}
 
   ngOnInit() {
-    this.as.getNewsMock().subscribe(data => {
+    this.as.getAllNews().subscribe(data => {
       this.news = data;
     });
+  }
+
+  delete(actu: any) {}
+
+  add(actu: any) {
+    this.as.addNews(actu.value);
+  }
+
+  showDialog() {
+    this.dialogStatus = 'active';
+    this.addDialog = this.dialog.open(AddDialogComponent, {
+      width: '550px',
+      data: {}
+    });
+
+    this.addDialog.afterClosed().subscribe(actu => {
+      this.dialogStatus = 'inactive';
+      if (actu) {
+        this.add(actu);
+      }
+    });
+  }
+
+  hideDialog() {
+    this.dialogStatus = 'inactive';
+    this.addDialog.close();
   }
 }
