@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Actualite } from '../../models/actualite.model';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { AddDialogComponent } from '../add-dialog/add-dialog.component';
 
 @Component({
   selector: 'app-actualite',
@@ -8,12 +10,35 @@ import { Actualite } from '../../models/actualite.model';
 })
 export class ActualiteComponent implements OnInit {
 
-  @Input()
-  actu: Actualite;
+  private addDialog: MatDialogRef<AddDialogComponent>;
+  dialogStatus = 'inactive';
 
-  constructor() { }
+  @Input() actu: Actualite;
+
+  constructor(public dialog: MatDialog) {}
 
   ngOnInit() {
   }
 
+  set(actu: Actualite) {}
+
+  showDialog() {
+    this.dialogStatus = 'active';
+    this.addDialog = this.dialog.open(AddDialogComponent, {
+      width: '550px',
+      data: {}
+    });
+
+    this.addDialog.afterClosed().subscribe(actu => {
+      this.dialogStatus = 'inactive';
+      if (actu) {
+        this.set(actu);
+      }
+    });
+  }
+
+  hideDialog() {
+    this.dialogStatus = 'inactive';
+    this.addDialog.close();
+  }
 }

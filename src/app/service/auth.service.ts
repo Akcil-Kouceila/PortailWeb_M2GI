@@ -10,5 +10,7 @@ export class AuthService {
     return this.afas.auth.signInWithEmailAndPassword(email, password);
   }
 
-  public signout() {}
+  public signout() {
+    this.afas.auth.signOut();
+  }
 }

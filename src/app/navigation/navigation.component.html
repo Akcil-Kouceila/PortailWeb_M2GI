@@ -5,8 +5,8 @@
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a [routerLink]="['/login']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" mat-list-item href="#">Connexion</a>
       <a [routerLink]="['/dashboard']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" mat-list-item href="#">Dashboard</a>
+      <a [routerLink]="['/news']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" mat-list-item href="#">Actualités</a>
       <a [routerLink]="['/trombinoscope']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" mat-list-item href="#">Trombinoscope</a>
     </mat-nav-list>
     <span class = "noms">K. OUALI & D. MAJKOWSKI <span>M2 GI - 2019/2020</span> </span>
@@ -23,8 +23,8 @@
       </button>
       <span>Portail Web</span>
       <div class="btn">
-        <a [routerLink]="['/']" class = "btn-link"> <img src="../assets/images/git-icon.png" alt="Git" class="icon"> </a>
-        <a [routerLink]="['/']" class = "btn-link"> <img src="../assets/images/out-icon.png" alt="Déconnexion" class="icon"> </a>
+        <a href="https://github.com/Akcil-Kouceila/PortailWeb_M2GI" target="_blank" class = "btn-link"> <img src="../assets/images/git-icon.png" alt="Git" class="icon"> </a>
+        <a [routerLink]="['/login']" class = "btn-link" (click)="signout()"> <img src="../assets/images/out-icon.png" alt="Déconnexion" class="icon"> </a>
       </div>
     </mat-toolbar>
     <router-outlet></router-outlet>

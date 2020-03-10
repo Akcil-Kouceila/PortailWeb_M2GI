@@ -28,6 +28,7 @@ import { FormNewsComponent } from './page/form-news/form-news.component';
 
 // Services
 import { AuthService } from './service/auth.service';
+import { AngularFireAuthGuard } from '@angular/fire/auth-guard';
 
 // Firebase
 import { AngularFireAuthModule } from '@angular/fire/auth';
@@ -66,7 +67,7 @@ import { AngularFireModule } from '@angular/fire';
     AngularFirestoreModule
   ],
   entryComponents: [AddDialogComponent],
-  providers: [AuthService],
+  providers: [AuthService, AngularFireAuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
