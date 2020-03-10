@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, Validators } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/service/auth.service';
 import { Router } from '@angular/router';
 
@@ -24,13 +24,8 @@ export class LoginComponent implements OnInit {
   onSubmit() {
     const email: string = this.loginForm.get('email').value;
     const password: string = this.loginForm.get('password').value;
-    this.auth.signin(email, password).then(
-      () => {
-        this.router.navigate(['dashboard']);
-      },
-      (error) => {
-        this.msgError = 'Adresse mail ou mot de passe invalide';
-      }
-    );
+    if (this.auth.signin(email, password) !== '') {
+      this.router.navigate(['dashboard']);
+    } else { this.msgError = 'Adresse mail ou mot de passe invalide'; }
   }
 }

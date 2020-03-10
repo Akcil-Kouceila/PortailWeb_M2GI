@@ -45,7 +45,7 @@ h3 {
 }
 
 .info mat-icon {
-  color: white;
+  color: #555555;
   position: relative;
 }
 
@@ -55,6 +55,10 @@ h3 {
   right: 0px;
   position: absolute;
   background: #136dd3;
+}
+
+.edit mat-icon {
+  color: white;
 }
 
 .email, .tel {

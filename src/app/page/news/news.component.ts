@@ -23,8 +23,6 @@ export class NewsComponent implements OnInit {
     });
   }
 
-  delete(actu: any) {}
-
   add(actu: any) {
     this.as.addNews(actu.value);
   }

@@ -1,5 +1,4 @@
 <div class="mainView">
-  <button class='btn' mat-fab (click)="showDialog()" *ngIf="dialogStatus == 'inactive'" mat-fab color="accent"><mat-icon>add</mat-icon></button>
   <app-fiche-utilisateur *ngFor = 'let user of users' [user] = 'user'>
   </app-fiche-utilisateur>
 </div>

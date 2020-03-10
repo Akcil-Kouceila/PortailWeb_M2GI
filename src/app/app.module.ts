@@ -24,7 +24,8 @@ import { ActualiteComponent } from './page/actualite/actualite.component';
 import { NewsComponent } from './page/news/news.component';
 import { UneComponent } from './page/une/une.component';
 import { AddDialogComponent } from './page/add-dialog/add-dialog.component';
-import { FormNewsComponent } from './page/form-news/form-news.component';
+import { FormNewsComponent } from './page/add-dialog/form-news/form-news.component';
+import { DialogEditNewsComponent } from './page/dialog-edit-news/dialog-edit-news.component';
 
 // Services
 import { AuthService } from './service/auth.service';
@@ -34,6 +35,7 @@ import { AngularFireAuthGuard } from '@angular/fire/auth-guard';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule, AngularFirestore } from '@angular/fire/firestore';
 import { AngularFireModule } from '@angular/fire';
+import { FormActuComponent } from './page/dialog-edit-news/form-actu/form-actu.component';
 
 
 @NgModule({
@@ -51,6 +53,8 @@ import { AngularFireModule } from '@angular/fire';
     UneComponent,
     AddDialogComponent,
     FormNewsComponent,
+    DialogEditNewsComponent,
+    FormActuComponent,
   ],
   imports: [
     BrowserModule,
@@ -66,7 +70,7 @@ import { AngularFireModule } from '@angular/fire';
     AngularFireAuthModule,
     AngularFirestoreModule
   ],
-  entryComponents: [AddDialogComponent],
+  entryComponents: [AddDialogComponent, DialogEditNewsComponent],
   providers: [AuthService, AngularFireAuthGuard],
   bootstrap: [AppComponent]
 })

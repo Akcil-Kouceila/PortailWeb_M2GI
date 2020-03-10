@@ -1,12 +1,12 @@
 import { Component, OnInit, Output, Input, EventEmitter, OnChanges } from '@angular/core';
-import { FormBuilder, FormControl, Validators } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-form-news',
-  templateUrl: './form-news.component.html',
-  styleUrls: ['./form-news.component.css']
+  selector: 'app-form-actu',
+  templateUrl: './form-actu.component.html',
+  styleUrls: ['./form-actu.component.css']
 })
-export class FormNewsComponent implements OnInit, OnChanges {
+export class FormActuComponent implements OnInit, OnChanges {
   @Input() model: any;
   isUpdateMode: boolean;
 
@@ -42,3 +42,4 @@ export class FormNewsComponent implements OnInit, OnChanges {
     this.submit$.emit(this.articleForm);
   }
 }
+

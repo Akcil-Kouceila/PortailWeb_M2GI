@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Actualite } from '../../models/actualite.model';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
-import { AddDialogComponent } from '../add-dialog/add-dialog.component';
+import { DialogEditNewsComponent } from '../dialog-edit-news/dialog-edit-news.component';
 
 @Component({
   selector: 'app-actualite',
@@ -10,7 +10,7 @@ import { AddDialogComponent } from '../add-dialog/add-dialog.component';
 })
 export class ActualiteComponent implements OnInit {
 
-  private addDialog: MatDialogRef<AddDialogComponent>;
+  private addDialog: MatDialogRef<DialogEditNewsComponent>;
   dialogStatus = 'inactive';
 
   @Input() actu: Actualite;
@@ -24,7 +24,7 @@ export class ActualiteComponent implements OnInit {
 
   showDialog() {
     this.dialogStatus = 'active';
-    this.addDialog = this.dialog.open(AddDialogComponent, {
+    this.addDialog = this.dialog.open(DialogEditNewsComponent, {
       width: '550px',
       data: {}
     });

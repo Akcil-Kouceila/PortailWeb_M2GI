@@ -20,7 +20,6 @@ export class NavigationComponent {
   constructor(private breakpointObserver: BreakpointObserver, private auth: AuthService) {}
 
   signout() {
-    console.log('Deconnexion')
     this.auth.signout();
   }
 }
