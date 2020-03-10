@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
+import { MAT_DIALOG_DATA} from '@angular/material/dialog';
+
 
 @Component({
   selector: 'app-dialog-edit-news',
@@ -7,7 +9,7 @@ import { MatDialogRef } from '@angular/material/dialog';
   styleUrls: ['./dialog-edit-news.component.css']
 })
 export class DialogEditNewsComponent implements OnInit {
-  constructor(public dialogRef: MatDialogRef<DialogEditNewsComponent>) {}
+  constructor(public dialogRef: MatDialogRef<DialogEditNewsComponent>,  @Inject(MAT_DIALOG_DATA) public data: any) {}
 
   closeDialog(result = null) {
     this.dialogRef.close(result);

@@ -24,4 +24,9 @@ export class NewsService {
     this.afs.collection<Actualite>('news').add(actu);
     return null;
   }
+
+  public setNews(actu): Observable<Actualite> {
+    this.afs.collection<Actualite>('news').doc(actu.titre).set(actu, {merge: true});
+    return null;
+  }
 }

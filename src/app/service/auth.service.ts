@@ -1,39 +1,50 @@
 import { Injectable } from '@angular/core';
+import { User } from 'firebase';
+import { User as UserData } from '../models/user.model';
+import { AngularFirestore } from '@angular/fire/firestore';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { Router } from '@angular/router';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
+
 export class AuthService {
+  user: User;
+  userData: UserData;
+  redirectUrl: string;
 
-  private roleUser = '';
-
-  constructor(private afas: AngularFireAuth) { }
-
-  public getRoleUser() {
-    return this.roleUser;
+  constructor(private afs: AngularFirestore, private afas: AngularFireAuth, public router: Router) {
+    this.afas.authState.subscribe(user => {
+      if (user) {
+        this.user = user;
+        localStorage.setItem('user', JSON.stringify(this.user));
+        this.afs
+        .collection('users')
+        .doc(user.uid)
+        .snapshotChanges().subscribe(res => {
+          if (res) {
+            const userData = res.payload.data() as UserData;
+            localStorage.setItem('userData', JSON.stringify(userData));
+          } else {
+            localStorage.setItem('userData', null);
+          }
+        });
+      } else {
+        localStorage.setItem('user', null);
+        localStorage.setItem('userData', null);
+      }
+    });
   }
 
-  public signin(email: string, password: string): any {
-
-
-    /*let rolesUser = [];
-  if (loginForm.username === 'admin') {
-    rolesUser = ['READ','WRITE'];
-  } else if (loginForm.username === 'lecteur') {
-    rolesUser = ['READ'];
-  } else if (loginForm.username === 'redacteur') {
-    rolesUser = ['WRITE'];
-  }
-  this.setUser({login : loginForm.username, roles : rolesUser});*/
-
-
-    this.afas.auth.signInWithEmailAndPassword(email, password).then(
-      () => { this.roleUser = 'Admin'; },
-      (error) => { this.roleUser = ''; },
-    ).finally(() => this.roleUser);
+  public signin(email: string, password: string) {
+    this.afas.auth.signInWithEmailAndPassword(email, password);
+    return JSON.parse(localStorage.getItem('user')) !== null;
   }
 
   public signout() {
     this.afas.auth.signOut();
-    this.roleUser = '';
+    localStorage.removeItem('user');
+    this.router.navigate(['login']);
   }
 }

@@ -6,17 +6,17 @@
   <form [formGroup]="articleForm">
       <mat-form-field>
         <mat-label>Titre de l'article <span class="ast">*</span></mat-label>
-        <input matInput name="titre" formControlName="titre">
+        <input [(ngModel)]="model.titre" matInput name="titre" formControlName="titre">
       </mat-form-field>
 
       <mat-form-field>
         <mat-label>Url de l'image <span class="ast">*</span></mat-label>
-        <input matInput name="image" formControlName="image">
+        <input [(ngModel)]="model.image" matInput name="image" formControlName="image">
       </mat-form-field>
 
       <mat-form-field>
         <mat-label>Texte <span class="ast">*</span></mat-label>
-        <textarea matInput name="texte" formControlName="texte"></textarea>
+        <textarea [(ngModel)]="model.texte" matInput name="texte" formControlName="texte"></textarea>
       </mat-form-field>
     </form>
 
