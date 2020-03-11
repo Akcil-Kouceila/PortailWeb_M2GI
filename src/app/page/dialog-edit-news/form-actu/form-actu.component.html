@@ -1,0 +1,31 @@
+<section class="mat-whiteframe-2dp">
+  <mat-card-title>
+    <span>Modifier cet article</span>
+  </mat-card-title>
+
+  <form [formGroup]="articleForm">
+      <mat-form-field>
+        <mat-label>Titre de l'article <span class="ast">*</span></mat-label>
+        <input [(ngModel)]="model.titre" matInput name="titre" formControlName="titre">
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Url de l'image <span class="ast">*</span></mat-label>
+        <input [(ngModel)]="model.image" matInput name="image" formControlName="image">
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Texte <span class="ast">*</span></mat-label>
+        <textarea [(ngModel)]="model.texte" matInput name="texte" formControlName="texte"></textarea>
+      </mat-form-field>
+    </form>
+
+  <div class="ast-info">
+    <span class="ast">* champs obligatoires</span>
+  </div>
+
+  <div align="end">
+    <button mat-button type="button" (click)="cancel()">Annuler</button>
+    <button mat-button color="primary" type="submit" (click)="submit()" [disabled]="articleForm.invalid">Enregistrer</button>
+  </div>
+</section>

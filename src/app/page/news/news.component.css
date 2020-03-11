@@ -1,0 +1,25 @@
+.mainView {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+h2 {
+  font-size: 1.2em;
+  top: 15px;
+  margin: 10px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.actualites {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+span button {
+  background: #136dd3;
+  position: fixed;
+  z-index: 1;
+  right: 25px;
+  bottom: 25px;
+}

@@ -124,5 +124,10 @@
       }
     }
   },
-  "defaultProject": "PortailWeb"
+  "defaultProject": "PortailWeb",
+  "cli": {
+    "warnings": {
+      "versionMismatch": false
+    }
+  }
 }

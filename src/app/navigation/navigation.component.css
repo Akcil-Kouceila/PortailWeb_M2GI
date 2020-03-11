@@ -17,7 +17,10 @@
 }
 
 mat-toolbar {
+  display: flex;
+  flex-direction: row;
   background-color: #1565c0;
+  width: 100%;
 }
 
 span {
@@ -29,7 +32,45 @@ a {
 }
 
 a.active {
-  padding-left: 10px;
   transition-duration: 0.5s;
   background-color: #F5F5F5;
+}
+
+mat-sidenav {
+  height: 100%;
+}
+
+.noms {
+  bottom: 20px;
+  left: 10px;
+  color: #BBB;
+  font-size: 0.8em;
+  position: fixed;
+}
+
+.noms span {
+  bottom: 10px;
+  left: 10px;
+  color: #BBB;
+  font-size: 0.6em;
+  position: fixed;
+}
+
+.btn {
+  float: right;
+  width: 100%;
+  text-align: right;
+  position: relative;
+  padding-right: 30px;
+}
+
+.btn-link {
+  margin: 10px;
+}
+
+.icon {
+  top: 5px;
+  width: 30px;
+  height: 30px;
+  position: relative;
 }

@@ -1,0 +1,45 @@
+<section class="mat-whiteframe-2dp">
+  <mat-card-title>
+    <span>Modifier cet utilisateur</span>
+  </mat-card-title>
+
+  <form [formGroup]="userForm">
+      <mat-form-field>
+        <mat-label>Nom<span class="ast">*</span></mat-label>
+        <input [(ngModel)]="model.nom" matInput name="nom" formControlName="nom">
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Prénom<span class="ast">*</span></mat-label>
+        <input [(ngModel)]="model.prenom" matInput name="prenom" formControlName="prenom">
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Url de l'image <span class="ast">*</span></mat-label>
+        <input [(ngModel)]="model.img" matInput name="img" formControlName="img">
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Adresse mail<span class="ast">*</span></mat-label>
+        <input [(ngModel)]="model.email" matInput name="email" formControlName="email">
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Téléphone<span class="ast">*</span></mat-label>
+        <input [(ngModel)]="model.tel" matInput name="tel" formControlName="tel">
+      </mat-form-field>
+
+      <mat-form-field style="display: none;">
+        <input [(ngModel)]="model.uid" matInput formControlName="uid">
+      </mat-form-field>
+    </form>
+
+  <div class="ast-info">
+    <span class="ast">* champs obligatoires</span>
+  </div>
+
+  <div align="end">
+    <button mat-button type="button" (click)="cancel()">Annuler</button>
+    <button mat-button color="primary" type="submit" (click)="submit()" [disabled]="userForm.invalid">Enregistrer</button>
+  </div>
+</section>

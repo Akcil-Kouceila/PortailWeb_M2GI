@@ -1,0 +1,17 @@
+form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.ast {
+  position: relative;
+  font-size: 0.6em;
+  color: brown;
+  top: -5px;
+}
+
+.ast-info {
+  top: 32px;
+  position: relative;
+}

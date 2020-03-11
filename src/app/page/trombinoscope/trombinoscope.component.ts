@@ -11,5 +11,4 @@ export class TrombinoscopeComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }

@@ -1,0 +1,18 @@
+<section>
+  <mat-card>
+    <div id="hr1"></div>
+    <div class="actualite">
+      <div class = "head-card">
+        <img class="image" [src] = 'actu.image' />
+      </div>
+      <div class = "middle">
+        <h3> {{actu.titre}} <span>{{this.actu.date}}</span></h3>
+      </div>
+      <div class = "body">
+        <div class = "texte">
+          {{actu.texte}}
+        </div>
+      </div>
+    </div>
+  </mat-card>
+</section>

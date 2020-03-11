@@ -1,0 +1,8 @@
+<div class="mainView">
+  <h2>Actualités</h2>
+  <span *ngIf="role === 'Admin'"><button mat-fab (click)="showDialog()" *ngIf="dialogStatus == 'inactive'" mat-fab color="accent"><mat-icon>add</mat-icon></button></span>
+  <div class="actualites">
+    <app-actualite *ngFor = 'let actu of news' [actu] = 'actu'>
+    </app-actualite>
+  </div>
+</div>

@@ -4,14 +4,15 @@
 
 export const environment = {
   production: false,
-  firebase: {
-    apiKey: 'AIzaSyAcGux4UlJMmr4RFENUyy4v2g329q8IXp8',
-    authDomain: 'portailweb-m2-gi.firebaseapp.com',
-    databaseURL: 'https://portailweb-m2-gi.firebaseio.com',
-    projectId: 'portailweb-m2-gi',
-    storageBucket: 'portailweb-m2-gi.appspot.com',
-    messagingSenderId: '155110968718',
-    appId: '1:155110968718:web:3ff5f036db74d6ce08e8df'
+  firebase : {
+    apiKey: "AIzaSyAFbckJqWTXekXt6aVNivYmHFXpvKAlskU",
+    authDomain: "portailweb-majkowski.firebaseapp.com",
+    databaseURL: "https://portailweb-majkowski.firebaseio.com",
+    projectId: "portailweb-majkowski",
+    storageBucket: "portailweb-majkowski.appspot.com",
+    messagingSenderId: "864035791582",
+    appId: "1:864035791582:web:6c6bc39e281d7e7cab184f",
+    measurementId: "G-BZDBJLRMH9"
   }
 };
 
