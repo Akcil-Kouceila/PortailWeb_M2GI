@@ -19,7 +19,7 @@ export class NavigationComponent {
 
   constructor(private breakpointObserver: BreakpointObserver, private auth: AuthService) {}
 
-  signout() {
-    this.auth.signout();
+  logout() {
+    this.auth.logout();
   }
 }

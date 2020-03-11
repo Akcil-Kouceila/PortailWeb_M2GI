@@ -20,13 +20,11 @@ export class NewsService {
     return this.afs.collection<Actualite>('news').valueChanges({idField: 'id'});
   }
 
-  public addNews(actu): Observable<Actualite> {
+  public addNews(actu) {
     this.afs.collection<Actualite>('news').add(actu);
-    return null;
   }
 
-  public setNews(actu): Observable<Actualite> {
+  public setNews(actu) {
     this.afs.collection<Actualite>('news').doc(actu.titre).set(actu, {merge: true});
-    return null;
   }
 }

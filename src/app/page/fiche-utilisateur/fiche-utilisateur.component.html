@@ -15,9 +15,11 @@
     <hr/>
     <div class = "body">
       <div class = "info">
-        <button class='edit' mat-mini-fab>
-          <mat-icon>edit</mat-icon>
-        </button>
+        <span *ngIf="this.auth.user.uid === user.uid || userRole === 'Admin'">
+          <button class='edit' mat-mini-fab (click)="showDialog(user)" *ngIf="dialogStatus == 'inactive'">
+            <mat-icon>edit</mat-icon>
+          </button>
+        </span>
         <mat-icon>email</mat-icon>
         <a
           class = "email"

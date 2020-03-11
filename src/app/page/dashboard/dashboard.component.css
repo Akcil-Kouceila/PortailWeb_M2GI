@@ -1,0 +1,25 @@
+section {
+  display: flex;
+  flex-direction: row;
+}
+
+mat-card {
+  margin: 10px;
+  width: 50%;
+  height: 160px;
+}
+
+mat-card-title {
+  background-color: #1565c0;
+  color: white;
+  padding: 10px;
+}
+
+p {
+  font-size: 0.8em;
+}
+
+button {
+  position: absolute;
+  right: 10px;
+}

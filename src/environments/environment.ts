@@ -5,12 +5,14 @@
 export const environment = {
   production: false,
   firebase : {
-    apiKey: 'AIzaSyAFbckJqWTXekXt6aVNivYmHFXpvKAlskU',
-    authDomain: 'portailweb-majkowski.firebaseapp.com',
-    databaseURL: 'https://portailweb-majkowski.firebaseio.com',
-    projectId: 'portailweb-majkowski',
-    storageBucket: 'portailweb-majkowski.appspot.com',
-    messagingSenderId: '864035791582',
+    apiKey: "AIzaSyAFbckJqWTXekXt6aVNivYmHFXpvKAlskU",
+    authDomain: "portailweb-majkowski.firebaseapp.com",
+    databaseURL: "https://portailweb-majkowski.firebaseio.com",
+    projectId: "portailweb-majkowski",
+    storageBucket: "portailweb-majkowski.appspot.com",
+    messagingSenderId: "864035791582",
+    appId: "1:864035791582:web:6c6bc39e281d7e7cab184f",
+    measurementId: "G-BZDBJLRMH9"
   }
 };
 

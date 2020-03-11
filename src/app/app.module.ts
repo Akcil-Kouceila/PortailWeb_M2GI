@@ -10,6 +10,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
+import { FormsModule } from '@angular/forms';
+import { RichTextEditorAllModule } from '@syncfusion/ej2-angular-richtexteditor';
 
 // Components
 import { AppComponent } from './app.component';
@@ -26,6 +28,9 @@ import { UneComponent } from './page/une/une.component';
 import { AddDialogComponent } from './page/add-dialog/add-dialog.component';
 import { FormNewsComponent } from './page/add-dialog/form-news/form-news.component';
 import { DialogEditNewsComponent } from './page/dialog-edit-news/dialog-edit-news.component';
+import { FormActuComponent } from './page/dialog-edit-news/form-actu/form-actu.component';
+import { DialogEditUserComponent } from './page/dialog-edit-user/dialog-edit-user.component';
+import { FormUserComponent } from './page/dialog-edit-user/form-user/form-user.component';
 
 // Services
 import { AuthService } from './service/auth.service';
@@ -35,7 +40,6 @@ import { AngularFireAuthGuard } from '@angular/fire/auth-guard';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule, AngularFirestore } from '@angular/fire/firestore';
 import { AngularFireModule } from '@angular/fire';
-import { FormActuComponent } from './page/dialog-edit-news/form-actu/form-actu.component';
 
 
 @NgModule({
@@ -55,6 +59,8 @@ import { FormActuComponent } from './page/dialog-edit-news/form-actu/form-actu.c
     FormNewsComponent,
     DialogEditNewsComponent,
     FormActuComponent,
+    DialogEditUserComponent,
+    FormUserComponent,
   ],
   imports: [
     BrowserModule,
@@ -65,12 +71,14 @@ import { FormActuComponent } from './page/dialog-edit-news/form-actu/form-actu.c
     ReactiveFormsModule,
     MatFormFieldModule,
     MatDialogModule,
+    FormsModule,
+    RichTextEditorAllModule,
 
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFirestoreModule
   ],
-  entryComponents: [AddDialogComponent, DialogEditNewsComponent],
+  entryComponents: [AddDialogComponent, DialogEditNewsComponent, DialogEditUserComponent],
   providers: [AuthService, AngularFireAuthGuard],
   bootstrap: [AppComponent]
 })

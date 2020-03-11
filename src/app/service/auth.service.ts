@@ -11,8 +11,7 @@ import { Router } from '@angular/router';
 
 export class AuthService {
   user: User;
-  userData: UserData;
-  redirectUrl: string;
+  userData: any;
 
   constructor(private afs: AngularFirestore, private afas: AngularFireAuth, public router: Router) {
     this.afas.authState.subscribe(user => {
@@ -37,12 +36,14 @@ export class AuthService {
     });
   }
 
-  public signin(email: string, password: string) {
-    this.afas.auth.signInWithEmailAndPassword(email, password);
+  public login(email: string, password: string) {
+    this.afas.auth.signInWithEmailAndPassword(email, password).then(
+      (data) => { this.router.navigate(['dashboard']); }
+    );
     return JSON.parse(localStorage.getItem('user')) !== null;
   }
 
-  public signout() {
+  public logout() {
     this.afas.auth.signOut();
     localStorage.removeItem('user');
     this.router.navigate(['login']);

@@ -2,7 +2,7 @@ import { User } from '../app/models/user.model';
 
 export const USERS: User[] = [
   {
-    id: 'A1xfqPd99yf7Fs',
+    uid: 'A1xfqPd99yf7Fs',
     nom: 'OUALI',
     prenom: 'Kouceila',
     email: 'akcil28@hotmail.fr',
@@ -11,7 +11,7 @@ export const USERS: User[] = [
     tel: '0 00 00 00 00'
   },
   {
-    id: 'A1xfqPt99dz7Fs',
+    uid: 'A1xfqPt99dz7Fs',
     nom: 'AMRANE',
     prenom: 'Amy',
     email: 'amy.amrane@gmail.com',
@@ -20,7 +20,7 @@ export const USERS: User[] = [
     tel: '0 00 00 00 00'
   },
   {
-    id: 'A1xfqP9cb9f7Fs',
+    uid: 'A1xfqP9cb9f7Fs',
     nom: 'AIT BELKACEM',
     prenom: 'Nadia',
     email: 'ait.nad@outlook.com',

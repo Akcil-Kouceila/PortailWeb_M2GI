@@ -6,10 +6,7 @@
         <img class="image" [src] = 'actu.image' />
       </div>
       <div class = "middle">
-        <h3> {{actu.titre}} <span>{{actu.date}}</span></h3>
-        <button class='edit' mat-mini-fab (click)="showDialog()" *ngIf="dialogStatus == 'inactive'">
-          <mat-icon>edit</mat-icon>
-        </button>
+        <h3> {{actu.titre}} <span>{{date}}</span></h3>
       </div>
       <div class = "body">
         <div class = "texte">

@@ -15,10 +15,12 @@ export class ActualiteComponent implements OnInit {
   dialogStatus = 'inactive';
 
   @Input() actu: Actualite;
+  date;
 
   constructor(private as: NewsService, public dialog: MatDialog) {}
 
   ngOnInit() {
+    this.date = new Date(this.actu.date.seconds).toLocaleString();
   }
 
   set(actu: Actualite) {
