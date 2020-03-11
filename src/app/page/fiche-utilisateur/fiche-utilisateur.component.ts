@@ -21,9 +21,7 @@ export class FicheUtilisateurComponent implements OnInit {
   constructor(private as: UserService, public auth: AuthService, public dialog: MatDialog) { }
 
   ngOnInit() {
-    this.as.getUser().subscribe((userData) => {
-      this.userRole = userData.role;
-    });
+    this.userRole = JSON.parse( localStorage.getItem('userData') ).role;
   }
 
   set(user: User) {

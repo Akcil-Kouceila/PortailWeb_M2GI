@@ -24,9 +24,8 @@ import { FicheUtilisateurComponent } from './page/fiche-utilisateur/fiche-utilis
 import { NavigationComponent } from './navigation/navigation.component';
 import { ActualiteComponent } from './page/actualite/actualite.component';
 import { NewsComponent } from './page/news/news.component';
-import { UneComponent } from './page/une/une.component';
-import { AddDialogComponent } from './page/add-dialog/add-dialog.component';
-import { FormNewsComponent } from './page/add-dialog/form-news/form-news.component';
+import { AddDialogComponent } from './page/dialog-add-news/add-dialog.component';
+import { FormNewsComponent } from './page/dialog-add-news/form-news/form-news.component';
 import { DialogEditNewsComponent } from './page/dialog-edit-news/dialog-edit-news.component';
 import { FormActuComponent } from './page/dialog-edit-news/form-actu/form-actu.component';
 import { DialogEditUserComponent } from './page/dialog-edit-user/dialog-edit-user.component';
@@ -54,7 +53,6 @@ import { AngularFireModule } from '@angular/fire';
     FicheUtilisateurComponent,
     ActualiteComponent,
     NewsComponent,
-    UneComponent,
     AddDialogComponent,
     FormNewsComponent,
     DialogEditNewsComponent,

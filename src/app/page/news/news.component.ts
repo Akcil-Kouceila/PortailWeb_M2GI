@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Actualite } from '../../models/actualite.model';
 import { NewsService } from 'src/app/service/news.service';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
-import { AddDialogComponent } from '../add-dialog/add-dialog.component';
+import { AddDialogComponent } from '../dialog-add-news/add-dialog.component';
 
 @Component({
   selector: 'app-news',
@@ -14,6 +14,7 @@ export class NewsComponent implements OnInit {
   dialogStatus = 'inactive';
 
   public news: Actualite[];
+  public role: string;
 
   constructor(private as: NewsService,  public dialog: MatDialog) {}
 
@@ -21,6 +22,7 @@ export class NewsComponent implements OnInit {
     this.as.getAllNews().subscribe(data => {
       this.news = data;
     });
+    this.role = JSON.parse( localStorage.getItem('userData') ).role;
   }
 
   add(actu: any) {

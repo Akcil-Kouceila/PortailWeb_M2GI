@@ -1,12 +1,14 @@
 section {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 mat-card {
-  margin: 10px;
-  width: 50%;
+  margin: 20px;
+  width: 400px;
   height: 160px;
+  padding: 0px;
 }
 
 mat-card-title {
@@ -16,10 +18,19 @@ mat-card-title {
 }
 
 p {
+  padding: 15px;
+  padding-top: 0px;
   font-size: 0.8em;
 }
 
 button {
   position: absolute;
   right: 10px;
+  bottom: 10px;
+}
+
+mat-icon {
+  margin-right: 8px;
+  top: 3px;
+  position: relative;
 }

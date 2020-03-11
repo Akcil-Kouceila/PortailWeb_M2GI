@@ -15,7 +15,7 @@
     <hr/>
     <div class = "body">
       <div class = "info">
-        <span *ngIf="this.auth.user.uid === user.uid || userRole === 'Admin'">
+        <span *ngIf="(this.auth.user.uid === user.uid && userRole !== 'Client')|| userRole === 'Admin'">
           <button class='edit' mat-mini-fab (click)="showDialog(user)" *ngIf="dialogStatus == 'inactive'">
             <mat-icon>edit</mat-icon>
           </button>

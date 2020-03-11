@@ -12,11 +12,7 @@ export class DashboardComponent implements OnInit {
 
   constructor(private auth: AuthService, private us: UserService, public router: Router) { }
 
-  ngOnInit() {
-    this.us.getUser().subscribe((data) => {
-      console.log('role : ' + data.role);
-    });
-  }
+  ngOnInit() { }
 
   goNews() {
     this.router.navigate(['news']);

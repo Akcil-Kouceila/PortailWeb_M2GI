@@ -14,6 +14,7 @@ export class FormNewsComponent implements OnInit, OnChanges {
     titre: ['', Validators.required],
     image: ['', Validators.required],
     texte: ['', Validators.required],
+    date: '11/03/2020',
   });
 
   @Output('cancel') cancel$: EventEmitter<any>;
