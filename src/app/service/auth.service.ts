@@ -4,6 +4,7 @@ import { User as UserData } from '../models/user.model';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -36,11 +37,8 @@ export class AuthService {
     });
   }
 
-  public login(email: string, password: string) {
-    this.afas.auth.signInWithEmailAndPassword(email, password).then(
-      (data) => { this.router.navigate(['dashboard']); }
-    );
-    return JSON.parse(localStorage.getItem('user')) !== null;
+  public signin(email: string, password: string): Promise<firebase.auth.UserCredential> {
+    return this.afas.auth.signInWithEmailAndPassword(email, password);
   }
 
   public logout() {

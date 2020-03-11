@@ -24,8 +24,13 @@ export class LoginComponent implements OnInit {
   onSubmit() {
     const email: string = this.loginForm.get('email').value;
     const password: string = this.loginForm.get('password').value;
-    if (this.auth.login(email, password)) {
-      this.router.navigate(['dashboard']);
-    } else { this.msgError = 'Adresse mail ou mot de passe invalide'; }
+    this.auth.signin(email, password).then(
+      () => {
+        this.router.navigate(['dashboard']);
+      },
+      (error) => {
+        this.msgError = 'Adresse mail ou mot de passe invalide';
+      }
+    );
   }
 }
